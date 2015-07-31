@@ -7,6 +7,11 @@ The RIS file (.ris) built using this library is recognized by the EndNote X7 des
 ## Requirements
 
 Java 1.4 or higher
+##How to build
+
+```
+mvn clean install
+```
 
 ## Sample Usage
 
