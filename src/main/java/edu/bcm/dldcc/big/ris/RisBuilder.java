@@ -6,9 +6,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-/**
- * Created by alexey on 6/29/15.
- */
 public class RisBuilder {
 
     private Pattern allowedChars = Pattern.compile("^[\\u0020-\\u00FF]*$");
@@ -208,7 +205,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setA4(String a4) {
-        checkWhiteList(a4);
         A4 = a4;
         return this;
     }
@@ -222,7 +218,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setAD(String ad) {
-        checkWhiteList(ad);
         this.AD = ad;
         return this;
     }
@@ -232,7 +227,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setAN(String an) {
-        checkWhiteList(an);
         AN = an;
         return this;
     }
@@ -251,7 +245,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setC1(String c1) {
-        checkWhiteList(c1);
         C1 = c1;
         return this;
     }
@@ -261,7 +254,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setC2(String c2) {
-        checkWhiteList(c2);
         C2 = c2;
         return this;
     }
@@ -271,7 +263,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setC3(String c3) {
-        checkWhiteList(c3);
         C3 = c3;
         return this;
     }
@@ -281,7 +272,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setC4(String c4) {
-        checkWhiteList(c4);
         C4 = c4;
         return this;
     }
@@ -291,7 +281,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setCA(String ca) {
-        checkWhiteList(ca);
         this.CA = ca;
         return this;
     }
@@ -301,7 +290,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setCN(String cn) {
-        checkWhiteList(cn);
         this.CN = cn;
         return this;
     }
@@ -311,7 +299,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setCY(String cy) {
-        checkWhiteList(cy);
         CY = cy;
         return this;
     }
@@ -321,7 +308,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setDA(String da) {
-        checkWhiteList(da);
         DA = da;
         return this;
     }
@@ -335,7 +321,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setJ2(String j2) {
-        checkWhiteList(j2);
         J2 = j2;
         return this;
     }
@@ -354,7 +339,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setL1(String l1) {
-        checkWhiteList(l1);
         L1 = l1;
         return this;
     }
@@ -364,7 +348,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setL4(String l4) {
-        checkWhiteList(l4);
         L4 = l4;
         return this;
     }
@@ -374,7 +357,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setLB(String lb) {
-        checkWhiteList(lb);
         this.LB = lb;
         return this;
     }
@@ -393,7 +375,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setNV(String nv) {
-        checkWhiteList(nv);
         this.NV = nv;
         return this;
     }
@@ -403,7 +384,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setOP(String op) {
-        checkWhiteList(op);
         this.OP = op;
         return this;
     }
@@ -413,7 +393,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setPY(String py) {
-        checkWhiteList(py);
         this.PY = py;
         return this;
     }
@@ -423,7 +402,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setRI(String RI) {
-        checkWhiteList(RI);
         this.RI = RI;
         return this;
     }
@@ -433,7 +411,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setRN(String RN) {
-        checkWhiteList(RN);
         this.RN = RN;
         return this;
     }
@@ -443,7 +420,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setSN(String sn) {
-        checkWhiteList(sn);
         this.SN = sn;
         return this;
     }
@@ -453,7 +429,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setST(String st) {
-        checkWhiteList(st);
         this.ST = st;
         return this;
     }
@@ -463,7 +438,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setT3(String t3) {
-        checkWhiteList(t3);
         T3 = t3;
         return this;
     }
@@ -473,7 +447,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setTA(String TA) {
-        checkWhiteList(TA);
         this.TA = TA;
         return this;
     }
@@ -487,7 +460,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setTT(String TT) {
-        checkWhiteList(TT);
         this.TT = TT;
         return this;
     }
@@ -510,7 +482,6 @@ public class RisBuilder {
      * @return reference to the object
      */
     public RisBuilder setTY(String ty) {
-        checkWhiteList(ty);
         this.TY = ty;
         return this;
     }
@@ -526,13 +497,11 @@ public class RisBuilder {
      * @return reference to the object
      */
     public RisBuilder setA2(String a2) {
-        checkWhiteList(a2);
         A2 = a2;
         return this;
     }
 
     public RisBuilder setAB(String ab) {
-        checkWhiteList(ab);
         AB = ab;
         return this;
     }
@@ -540,13 +509,9 @@ public class RisBuilder {
     /**
      * Adds a new note to the list. Note: notes will be written to file in the order you add them.
      * @param n1
-     * @return RisBuilder
+     * @return
      */
     public RisBuilder addNote(String n1) {
-        checkWhiteList(n1);
-        if (null != n1 && n1.length() > 255) {
-            throw new IllegalArgumentException("");
-        }
         N1.add(n1);
         return this;
     }
@@ -565,7 +530,6 @@ public class RisBuilder {
         if (au.contains("*") ) {
             throw new IllegalArgumentException("Author name cannot contain * ");
         }
-        checkWhiteList(au);
         AU.add(au);
         return this;
     }
@@ -576,10 +540,6 @@ public class RisBuilder {
      * @return RisBuilder
      */
     public RisBuilder addKW(String kw) {
-        checkWhiteList(kw);
-        if (null != kw && kw.length() > 255) {
-            throw new IllegalArgumentException("");
-        }
         KW.add(kw);
         return this;
     }
@@ -594,7 +554,6 @@ public class RisBuilder {
      * @return this
      */
     public RisBuilder setLA(String LA) {
-        checkWhiteList(LA);
         this.LA = LA;
         return this;
     }
@@ -609,7 +568,6 @@ public class RisBuilder {
      * @return this
      */
     public RisBuilder setPB(String pb) {
-        checkWhiteList(pb);
         this.PB = pb;
         return this;
     }
@@ -619,7 +577,6 @@ public class RisBuilder {
     }
 
     public RisBuilder setTy(String ty) {
-        checkWhiteList(ty);
         TY = ty;
         return this;
     }
@@ -631,10 +588,9 @@ public class RisBuilder {
     /**
      * Set edition/version
      * @param version version
-     * @return RisBuilder
+     * @return
      */
     public RisBuilder setET(String version) {
-        checkWhiteList(version);
         this.ET = version;
         return this;
     }
@@ -644,13 +600,11 @@ public class RisBuilder {
     }
 
     public RisBuilder setSE(String se) {
-        checkWhiteList(se);
         this.SE = se;
         return this;
     }
 
     public RisBuilder setDO(String doi) {
-        checkWhiteList(doi);
         DO = doi;
         return this;
     }
@@ -665,7 +619,6 @@ public class RisBuilder {
      * @return this
      */
     public RisBuilder setDP(String dp) {
-        checkWhiteList(dp);
         this.DP = dp;
         return this;
     }
@@ -680,7 +633,6 @@ public class RisBuilder {
      * @return this
      */
     public RisBuilder setDB(String db) {
-        checkWhiteList(db);
         this.DB = db;
         return this;
     }
@@ -690,31 +642,18 @@ public class RisBuilder {
      * @return this
      */
     public RisBuilder setTI(String title) {
-        checkWhiteList(title);
         TI = title;
         return this;
     }
 
     public RisBuilder setUR(String url) {
-        checkWhiteList(url);
         UR = url;
         return this;
     }
 
     public RisBuilder setY2(String year) {
-        checkWhiteList(year);
         Y2 = year;
         return this;
     }
 
-    /**
-     * Checks the str1 for illegal characters. if does not match whitelist throws  IllegalArgumentException
-     * @param str1 string to check
-     */
-
-    private void checkWhiteList(String str1) {
-        if (!allowedChars.matcher(str1).matches()) {
-            throw new IllegalArgumentException("Illegal character in field: "+str1);
-        }
-    }
 }
